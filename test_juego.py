@@ -11,14 +11,14 @@ class TestCompararOpciones(unittest.TestCase):
         self.assertEqual(compararOpciones('papel', 'papel'), 0)
 
     def testTijera_Tijera(self):
-        self.assertEqual(compararOpciones('tijera', 'tijera'), 0)
+        self.assertEqual(compararOpciones('agua', 'tijera'), 0)
 
 # primero gana
     def testPiedra_Tijera(self):
         self.assertEqual(compararOpciones('piedra', 'tijera'), 1)
 
     def testPapel_Piedra(self):
-        self.assertEqual(compararOpciones('papel', 'piedra'), 1)
+        self.assertEqual(compararOpciones('papel', 'roca'), 1)
 
     def testTijera_Papel(self):
         self.assertEqual(compararOpciones('tijera', 'papel'), 1)
